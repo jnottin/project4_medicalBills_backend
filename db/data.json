@@ -1,0 +1,38 @@
+[
+    {
+        "name": "AllCare Family Medical Practice - Arlington",
+        "address": "1515 N Courthouse Rd, Arlington, VA 22201",
+        "long": -77.082917,
+        "lat": 38.891747
+    },
+    {
+        "name": "Falls Church Primary & Urgent Care Services",
+        "address": "5860 Columbia Pike, Falls Church, VA 22041",
+        "long": -77.0804,
+        "lat": 38.848869
+    },
+    {
+        "name": "AEHS Urgent Care",
+        "address": "7432 Little River Tpke, Annandale, VA 22003",
+        "long": -77.201559,
+        "lat": 38.832562
+    },
+    {
+        "name": "The George Washington University Hospital",
+        "address": "900 23rd St NW, Washington, DC 20037",
+        "long": -77.050657,
+        "lat": 38.901572
+    },
+    {
+        "name": "Inova Alexandria Hospital",
+        "address": "4320 Seminary Rd, Alexandria, VA 22304",
+        "long": -77.105010,
+        "lat": 38.822989
+    },
+    {
+        "name": "AllCare Family Medical Practice - Arlington",
+        "address": "1515 N Courthouse Rd, Arlington, VA 22201",
+        "long": -77.082917,
+        "lat": 38.891747
+    }
+]
