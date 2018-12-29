@@ -11,8 +11,9 @@ const Procedure = new Schema({
 const Hospital = new Schema({
     name: String,
     address: String,
-    long: Number,
+    lng: Number,
     lat: Number,
+    cost: Number,
     procedures: [Procedure],
 });
 

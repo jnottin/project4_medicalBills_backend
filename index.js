@@ -25,6 +25,27 @@ app.get("/api/hospitals", (req, res) => {
         });
 });
 
+app.post("/newMedicalBill", (req, res) => {
+    console.log(req.body);
+    Hospital.create({
+        name: req.body.name,
+        address: req.body.address,
+        lng: req.body.lng,
+        lat: req.body.lat,
+        cost: req.body.cost,
+        procedures: [{
+            name_of_procedure: req.body.name_of_procedure
+        }]
+    }).then(hospital => {
+        // let name_of_procedure_input = req.body.name_of_procedure
+        // console.log(name_of_procedure)
+        // hospital.procedures.push({
+        //     name_of_procedure: name_of_procedure_input,
+        // });
+        res.send(hospital);
+    });
+});
+
 
 
 app.set('port', process.env.PORT || 3010)
