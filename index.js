@@ -37,24 +37,26 @@ app.get("/api/hospitals", (req, res) => {
 
 app.post("/newMedicalBill", (req, res) => {
     console.log(req.body);
-    Hospital.create({
-        name: req.body.name,
-        address: req.body.address,
-        lng: req.body.lng,
-        lat: req.body.lat,
-        cost: req.body.cost,
-        procedures: [{
-            name_of_procedure: req.body.name_of_procedure
-        }]
-    }).then(hospital => {
-        // let name_of_procedure_input = req.body.name_of_procedure
-        // console.log(name_of_procedure)
-        // hospital.procedures.push({
-        //     name_of_procedure: name_of_procedure_input,
-        // });
-        res.send(hospital);
-    });
+    console.log(req.body.name);
+    if (Hospital.find({ name: req.body.name }).count() > 0) {
+        console.log("found")
+    } else {
+        Hospital.create({
+            name: req.body.name,
+            address: req.body.address,
+            lng: req.body.lng,
+            lat: req.body.lat,
+            cost: req.body.cost,
+            procedures: [{
+                name_of_procedure: req.body.name_of_procedure,
+                cost: req.body.cost,
+            }]
+        }).then(hospital => {
+            res.send(hospital);
+        });
+    }
 });
+
 
 
 
