@@ -50,6 +50,8 @@ app.post("/newMedicalBill", (req, res) => {
             procedures: [{
                 name_of_procedure: req.body.name_of_procedure,
                 cost: req.body.cost,
+                insurance_provider: req.body.insurance_provider,
+                date_of_procedure: req.body.date_of_procedure,
             }]
         }).then(hospital => {
             res.send(hospital);
