@@ -1,0 +1,20 @@
+[
+    {
+        "name_of_procedure": "root-canal",
+        "cost": 400,
+        "insurance_provider": "Blue Cross",
+        "date_of_procedure": "12/17/18"
+    },
+    {
+        "name_of_procedure": "Fever",
+        "cost": 500,
+        "insurance_provider": "Blue Cross",
+        "date_of_procedure": "12/17/18"
+    },
+    {
+        "name_of_procedure": "Back Pain",
+        "cost": 1000,
+        "insurance_provider": "Medic Help",
+        "date_of_procedure": "12/17/18"
+    }
+]
