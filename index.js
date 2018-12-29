@@ -15,6 +15,16 @@ app.use(express.static("client/build"));
 //     res.sendFile(__dirname + "/client/build/index.html");
 // });
 
+app.get("/api/procedures", (req, res) => {
+    Procedure.find()
+        .then(procedure => {
+            res.json(procedure);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
 app.get("/api/hospitals", (req, res) => {
     Hospital.find()
         .then(hospital => {
