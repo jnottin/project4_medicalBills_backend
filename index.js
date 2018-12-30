@@ -37,26 +37,25 @@ app.get("/api/hospitals", (req, res) => {
 
 app.post("/newMedicalBill", (req, res) => {
     console.log(req.body);
-    console.log(req.body.name);
-    if (Hospital.findOne({ name: req.body.name }).count() > 0) {
-        console.log("found")
-    } else {
-        Hospital.create({
-            name: req.body.name,
-            address: req.body.address,
-            lng: req.body.lng,
-            lat: req.body.lat,
-            cost: req.body.cost,
-            // procedures: [{
-            //     name_of_procedure: req.body.name_of_procedure,
-            //     cost: req.body.cost,
-            //     insurance_provider: req.body.insurance_provider,
-            //     date_of_procedure: req.body.date_of_procedure,
-            // }]
-        }).then(hospital => {
-            res.send(hospital);
-        });
-    }
+    console.log(req.body.procedure);
+    var procedureCost = req.body.procedure
+    console.log(procedureCost);
+
+
+    // if (Hospital.findOne({ name: req.body.name }).count() > 0) {
+    //     console.log("found")
+    // } else {
+    Hospital.create({
+        name: req.body.name,
+        address: req.body.address,
+        lng: req.body.lng,
+        lat: req.body.lat,
+        cost: req.body.cost,
+        procedureCost: req.body.cost,
+    }).then(hospital => {
+        res.send(hospital);
+    });
+    // }
 });
 
 

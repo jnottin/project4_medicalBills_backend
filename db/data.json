@@ -120,14 +120,12 @@
         "lat": 38.832562,
         "cost": 600,
         "appendectomy_cost": [
-            700,
-            800,
-            900
+            100,
+            200
         ],
         "breast_biopsy_cost": [
-            700,
-            800,
-            900
+            200,
+            300
         ],
         "carotid_endarterectomy_cost": [
             700,
