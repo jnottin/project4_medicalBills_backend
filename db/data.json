@@ -7,7 +7,7 @@
         "cost": 500,
         "procedures": [
             {
-                "name_of_procedure": "root-canal",
+                "name_of_procedure": "Root-canal",
                 "cost": 400,
                 "insurance_provider": "Blue Cross",
                 "date_of_procedure": "12/17/18"
@@ -15,6 +15,12 @@
             {
                 "name_of_procedure": "Fever",
                 "cost": 500,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 1000,
                 "insurance_provider": "Blue Cross",
                 "date_of_procedure": "12/17/18"
             },
@@ -31,34 +37,164 @@
         "address": "5860 Columbia Pike, Falls Church, VA 22041",
         "lng": -77.0804,
         "lat": 38.848869,
-        "cost": 300
+        "cost": 300,
+        "procedures": [
+            {
+                "name_of_procedure": "Root-canal",
+                "cost": 400,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 500,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 1000,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Back Pain",
+                "cost": 1000,
+                "insurance_provider": "Medic Help",
+                "date_of_procedure": "12/17/18"
+            }
+        ]
     },
     {
         "name": "AEHS Urgent Care",
         "address": "7432 Little River Tpke, Annandale, VA 22003",
         "lng": -77.201559,
         "lat": 38.832562,
-        "cost": 600
+        "cost": 600,
+        "procedures": [
+            {
+                "name_of_procedure": "Root-canal",
+                "cost": 400,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 500,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 1000,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Back Pain",
+                "cost": 1000,
+                "insurance_provider": "Medic Help",
+                "date_of_procedure": "12/17/18"
+            }
+        ]
     },
     {
         "name": "The George Washington University Hospital",
         "address": "900 23rd St NW, Washington, DC 20037",
         "lng": -77.050657,
         "lat": 38.901572,
-        "cost": 700
+        "cost": 700,
+        "procedures": [
+            {
+                "name_of_procedure": "Root-canal",
+                "cost": 400,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 500,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 1000,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Back Pain",
+                "cost": 1000,
+                "insurance_provider": "Medic Help",
+                "date_of_procedure": "12/17/18"
+            }
+        ]
     },
     {
         "name": "Inova Alexandria Hospital",
         "address": "4320 Seminary Rd, Alexandria, VA 22304",
         "lng": -77.105010,
         "lat": 38.822989,
-        "cost": 500
+        "cost": 500,
+        "procedures": [
+            {
+                "name_of_procedure": "Root-canal",
+                "cost": 400,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 500,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 1000,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Back Pain",
+                "cost": 1000,
+                "insurance_provider": "Medic Help",
+                "date_of_procedure": "12/17/18"
+            }
+        ]
     },
     {
         "name": "AllCare Family Medical Practice - Arlington",
         "address": "1515 N Courthouse Rd, Arlington, VA 22201",
         "lng": -77.042917,
         "lat": 38.991747,
-        "cost": 800
+        "cost": 800,
+        "procedures": [
+            {
+                "name_of_procedure": "Root-canal",
+                "cost": 400,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 500,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Fever",
+                "cost": 1000,
+                "insurance_provider": "Blue Cross",
+                "date_of_procedure": "12/17/18"
+            },
+            {
+                "name_of_procedure": "Back Pain",
+                "cost": 1000,
+                "insurance_provider": "Medic Help",
+                "date_of_procedure": "12/17/18"
+            }
+        ]
     }
 ]

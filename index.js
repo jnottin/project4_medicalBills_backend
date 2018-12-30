@@ -38,7 +38,7 @@ app.get("/api/hospitals", (req, res) => {
 app.post("/newMedicalBill", (req, res) => {
     console.log(req.body);
     console.log(req.body.name);
-    if (Hospital.find({ name: req.body.name }).count() > 0) {
+    if (Hospital.findOne({ name: req.body.name }).count() > 0) {
         console.log("found")
     } else {
         Hospital.create({
@@ -47,12 +47,12 @@ app.post("/newMedicalBill", (req, res) => {
             lng: req.body.lng,
             lat: req.body.lat,
             cost: req.body.cost,
-            procedures: [{
-                name_of_procedure: req.body.name_of_procedure,
-                cost: req.body.cost,
-                insurance_provider: req.body.insurance_provider,
-                date_of_procedure: req.body.date_of_procedure,
-            }]
+            // procedures: [{
+            //     name_of_procedure: req.body.name_of_procedure,
+            //     cost: req.body.cost,
+            //     insurance_provider: req.body.insurance_provider,
+            //     date_of_procedure: req.body.date_of_procedure,
+            // }]
         }).then(hospital => {
             res.send(hospital);
         });
