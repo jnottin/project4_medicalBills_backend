@@ -5,31 +5,55 @@
         "lng": -77.082917,
         "lat": 38.891747,
         "cost": 500,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "appendectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "breast_biopsy_cost": [
+            700,
+            800,
+            900
+        ],
+        "carotid_endarterectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "cataract_surgery_cost": [
+            700,
+            800,
+            900
+        ],
+        "cesarean_section_cost": [
+            700,
+            800,
+            900
+        ],
+        "coronary_artery_bypass_cost": [
+            700,
+            800,
+            900
+        ],
+        "debridement_of_wound_cost": [
+            700,
+            800,
+            900
+        ],
+        "free_skin_graft_cost": [
+            700,
+            800,
+            900
+        ],
+        "spinal_fusion_cost": [
+            700,
+            800,
+            900
+        ],
+        "total_hip_replacement_cost": [
+            700,
+            800,
+            900
         ]
     },
     {
@@ -38,31 +62,55 @@
         "lng": -77.0804,
         "lat": 38.848869,
         "cost": 300,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "appendectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "breast_biopsy_cost": [
+            700,
+            800,
+            900
+        ],
+        "carotid_endarterectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "cataract_surgery_cost": [
+            700,
+            800,
+            900
+        ],
+        "cesarean_section_cost": [
+            700,
+            800,
+            900
+        ],
+        "coronary_artery_bypass_cost": [
+            700,
+            800,
+            900
+        ],
+        "debridement_of_wound_cost": [
+            700,
+            800,
+            900
+        ],
+        "free_skin_graft_cost": [
+            700,
+            800,
+            900
+        ],
+        "spinal_fusion_cost": [
+            700,
+            800,
+            900
+        ],
+        "total_hip_replacement_cost": [
+            700,
+            800,
+            900
         ]
     },
     {
@@ -71,31 +119,53 @@
         "lng": -77.201559,
         "lat": 38.832562,
         "cost": 600,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "appendectomy_cost": [
+            100,
+            200
+        ],
+        "breast_biopsy_cost": [
+            200,
+            300
+        ],
+        "carotid_endarterectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "cataract_surgery_cost": [
+            700,
+            800,
+            900
+        ],
+        "cesarean_section_cost": [
+            700,
+            800,
+            900
+        ],
+        "coronary_artery_bypass_cost": [
+            700,
+            800,
+            900
+        ],
+        "debridement_of_wound_cost": [
+            700,
+            800,
+            900
+        ],
+        "free_skin_graft_cost": [
+            700,
+            800,
+            900
+        ],
+        "spinal_fusion_cost": [
+            700,
+            800,
+            900
+        ],
+        "total_hip_replacement_cost": [
+            700,
+            800,
+            900
         ]
     },
     {
@@ -104,31 +174,55 @@
         "lng": -77.050657,
         "lat": 38.901572,
         "cost": 700,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "appendectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "breast_biopsy_cost": [
+            700,
+            800,
+            900
+        ],
+        "carotid_endarterectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "cataract_surgery_cost": [
+            700,
+            800,
+            900
+        ],
+        "cesarean_section_cost": [
+            700,
+            800,
+            900
+        ],
+        "coronary_artery_bypass_cost": [
+            700,
+            800,
+            900
+        ],
+        "debridement_of_wound_cost": [
+            700,
+            800,
+            900
+        ],
+        "free_skin_graft_cost": [
+            700,
+            800,
+            900
+        ],
+        "spinal_fusion_cost": [
+            700,
+            800,
+            900
+        ],
+        "total_hip_replacement_cost": [
+            700,
+            800,
+            900
         ]
     },
     {
@@ -137,31 +231,55 @@
         "lng": -77.105010,
         "lat": 38.822989,
         "cost": 500,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "appendectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "breast_biopsy_cost": [
+            700,
+            800,
+            900
+        ],
+        "carotid_endarterectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "cataract_surgery_cost": [
+            700,
+            800,
+            900
+        ],
+        "cesarean_section_cost": [
+            700,
+            800,
+            900
+        ],
+        "coronary_artery_bypass_cost": [
+            700,
+            800,
+            900
+        ],
+        "debridement_of_wound_cost": [
+            700,
+            800,
+            900
+        ],
+        "free_skin_graft_cost": [
+            700,
+            800,
+            900
+        ],
+        "spinal_fusion_cost": [
+            700,
+            800,
+            900
+        ],
+        "total_hip_replacement_cost": [
+            700,
+            800,
+            900
         ]
     },
     {
@@ -170,31 +288,55 @@
         "lng": -77.042917,
         "lat": 38.991747,
         "cost": 800,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "appendectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "breast_biopsy_cost": [
+            700,
+            800,
+            900
+        ],
+        "carotid_endarterectomy_cost": [
+            700,
+            800,
+            900
+        ],
+        "cataract_surgery_cost": [
+            700,
+            800,
+            900
+        ],
+        "cesarean_section_cost": [
+            700,
+            800,
+            900
+        ],
+        "coronary_artery_bypass_cost": [
+            700,
+            800,
+            900
+        ],
+        "debridement_of_wound_cost": [
+            700,
+            800,
+            900
+        ],
+        "free_skin_graft_cost": [
+            700,
+            800,
+            900
+        ],
+        "spinal_fusion_cost": [
+            700,
+            800,
+            900
+        ],
+        "total_hip_replacement_cost": [
+            700,
+            800,
+            900
         ]
     }
 ]
