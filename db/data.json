@@ -4,55 +4,49 @@
         "address": "1515 N Courthouse Rd, Arlington, VA 22201",
         "lng": -77.082917,
         "lat": 38.891747,
-        "cost": 500,
         "appendectomy_cost": [
-            700,
-            800,
-            900
+            234,
+            2333,
+            342
         ],
         "breast_biopsy_cost": [
-            700,
-            800,
-            900
+            556,
+            233,
+            122
         ],
         "carotid_endarterectomy_cost": [
-            700,
-            800,
-            900
+            2123,
+            123,
+            145
         ],
         "cataract_surgery_cost": [
-            700,
-            800,
-            900
+            333,
+            678
         ],
         "cesarean_section_cost": [
-            700,
+            333,
             800,
             900
         ],
         "coronary_artery_bypass_cost": [
-            700,
-            800,
+            333,
             900
         ],
         "debridement_of_wound_cost": [
-            700,
-            800,
+            333,
             900
         ],
         "free_skin_graft_cost": [
-            700,
-            800,
-            900
+            333,
+            345
         ],
         "spinal_fusion_cost": [
-            700,
-            800,
+            333,
             900
         ],
         "total_hip_replacement_cost": [
-            700,
-            800,
+            333,
+            234,
             900
         ]
     },
@@ -61,54 +55,49 @@
         "address": "5860 Columbia Pike, Falls Church, VA 22041",
         "lng": -77.0804,
         "lat": 38.848869,
-        "cost": 300,
         "appendectomy_cost": [
-            700,
+            344,
             800,
-            900
+            234
         ],
         "breast_biopsy_cost": [
-            700,
+            333,
             800,
             900
         ],
         "carotid_endarterectomy_cost": [
-            700,
-            800,
+            333,
+            234,
             900
         ],
         "cataract_surgery_cost": [
-            700,
+            333,
             800,
             900
         ],
         "cesarean_section_cost": [
-            700,
-            800,
+            333,
             900
         ],
         "coronary_artery_bypass_cost": [
-            700,
+            333,
             800,
             900
         ],
         "debridement_of_wound_cost": [
-            700,
-            800,
-            900
+            333,
+            800
         ],
         "free_skin_graft_cost": [
-            700,
+            333,
             800,
             900
         ],
         "spinal_fusion_cost": [
-            700,
             800,
             900
         ],
         "total_hip_replacement_cost": [
-            700,
             800,
             900
         ]
@@ -118,7 +107,6 @@
         "address": "7432 Little River Tpke, Annandale, VA 22003",
         "lng": -77.201559,
         "lat": 38.832562,
-        "cost": 600,
         "appendectomy_cost": [
             100,
             200
@@ -128,42 +116,42 @@
             300
         ],
         "carotid_endarterectomy_cost": [
-            700,
-            800,
+            333,
+            3455,
             900
         ],
         "cataract_surgery_cost": [
-            700,
+            333,
             800,
-            900
+            345
         ],
         "cesarean_section_cost": [
-            700,
-            800,
+            333,
+            123,
             900
         ],
         "coronary_artery_bypass_cost": [
-            700,
-            800,
+            333,
+            456,
             900
         ],
         "debridement_of_wound_cost": [
-            700,
-            800,
-            900
+            333,
+            23444,
+            344
         ],
         "free_skin_graft_cost": [
-            700,
-            800,
+            333,
+            3455,
             900
         ],
         "spinal_fusion_cost": [
-            700,
+            333,
             800,
-            900
+            234
         ],
         "total_hip_replacement_cost": [
-            700,
+            333,
             800,
             900
         ]
@@ -173,55 +161,54 @@
         "address": "900 23rd St NW, Washington, DC 20037",
         "lng": -77.050657,
         "lat": 38.901572,
-        "cost": 700,
         "appendectomy_cost": [
-            700,
+            333,
             800,
             900
         ],
         "breast_biopsy_cost": [
-            700,
-            800,
+            333,
+            233,
             900
         ],
         "carotid_endarterectomy_cost": [
-            700,
-            800,
+            333,
+            3455,
             900
         ],
         "cataract_surgery_cost": [
-            700,
+            333,
             800,
             900
         ],
         "cesarean_section_cost": [
-            700,
-            800,
+            333,
+            234,
             900
         ],
         "coronary_artery_bypass_cost": [
-            700,
+            333,
             800,
             900
         ],
         "debridement_of_wound_cost": [
-            700,
-            800,
+            333,
+            2345,
             900
         ],
         "free_skin_graft_cost": [
-            700,
+            333,
             800,
             900
         ],
         "spinal_fusion_cost": [
-            700,
+            333,
             800,
             900
         ],
         "total_hip_replacement_cost": [
-            700,
-            800,
+            333,
+            5566,
             900
         ]
     },
@@ -230,56 +217,55 @@
         "address": "4320 Seminary Rd, Alexandria, VA 22304",
         "lng": -77.105010,
         "lat": 38.822989,
-        "cost": 500,
         "appendectomy_cost": [
-            700,
-            800,
+            333,
+            3456,
             900
         ],
         "breast_biopsy_cost": [
-            700,
+            333,
             800,
-            900
+            233
         ],
         "carotid_endarterectomy_cost": [
-            700,
+            333,
             800,
             900
         ],
         "cataract_surgery_cost": [
-            700,
-            800,
+            333,
+            435,
             900
         ],
         "cesarean_section_cost": [
-            700,
-            800,
+            333,
+            33,
             900
         ],
         "coronary_artery_bypass_cost": [
-            700,
+            333,
             800,
-            900
+            2345
         ],
         "debridement_of_wound_cost": [
-            700,
+            333,
             800,
-            900
+            2344
         ],
         "free_skin_graft_cost": [
-            700,
+            333,
             800,
-            900
+            2345
         ],
         "spinal_fusion_cost": [
-            700,
-            800,
+            333,
+            234,
             900
         ],
         "total_hip_replacement_cost": [
-            700,
+            333,
             800,
-            900
+            789
         ]
     },
     {
@@ -287,55 +273,54 @@
         "address": "1515 N Courthouse Rd, Arlington, VA 22201",
         "lng": -77.042917,
         "lat": 38.991747,
-        "cost": 800,
         "appendectomy_cost": [
-            700,
+            333,
             800,
-            900
+            344
         ],
         "breast_biopsy_cost": [
-            700,
+            333,
             800,
             900
         ],
         "carotid_endarterectomy_cost": [
-            700,
+            333,
             800,
             900
         ],
         "cataract_surgery_cost": [
-            700,
-            800,
+            333,
+            345,
             900
         ],
         "cesarean_section_cost": [
-            700,
-            800,
+            333,
+            345,
             900
         ],
         "coronary_artery_bypass_cost": [
-            700,
-            800,
+            333,
+            345,
             900
         ],
         "debridement_of_wound_cost": [
-            700,
-            800,
+            333,
+            33,
             900
         ],
         "free_skin_graft_cost": [
-            700,
-            800,
-            900
+            333,
+            67,
+            233
         ],
         "spinal_fusion_cost": [
-            700,
-            800,
+            333,
+            344,
             900
         ],
         "total_hip_replacement_cost": [
-            700,
-            800,
+            333,
+            3455,
             900
         ]
     }
