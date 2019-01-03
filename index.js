@@ -11,9 +11,9 @@ app.use(cors());
 
 app.use(express.static("client/build"));
 
-// app.get("/", (req, res) => {
-//     res.sendFile(__dirname + "/client/build/index.html");
-// });
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/client/build/index.html");
+});
 
 // app.get("/api/hospitals", (req, res) => {
 //     Hospital.find()
