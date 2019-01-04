@@ -15,16 +15,6 @@ app.use(express.static("client/build"));
 //     res.sendFile(__dirname + "/client/build/index.html");
 // });
 
-// app.get("/api/hospitals", (req, res) => {
-//     Hospital.find()
-//         .then(hospital => {
-//             res.json(hospital);
-//         })
-//         .catch(err => {
-//             console.log(err);
-//         });
-// });
-
 
 //NEW TO TRY AVERAGE
 app.get("/api/hospitals", (req, res) => {
