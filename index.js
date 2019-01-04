@@ -4,12 +4,16 @@ const cors = require("cors");
 const { Hospital } = require("./models/hospital.js");
 const port = process.env.PORT || 3010;
 
+//required for environmental variables on frontend
+require('dotenv').config();
+
 const app = express();
 
 app.use(parser.json());
 app.use(cors());
 
 app.use(express.static("client/build"));
+
 
 // app.get("/", (req, res) => {
 //     res.sendFile(__dirname + "/client/build/index.html");
