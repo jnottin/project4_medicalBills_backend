@@ -5,13 +5,13 @@
         "lng": -77.082917,
         "lat": 38.891747,
         "appendectomy_cost": [
-            234,
+            556,
             2333,
             342
         ],
         "breast_biopsy_cost": [
             556,
-            233,
+            4543,
             122
         ],
         "carotid_endarterectomy_cost": [
@@ -20,29 +20,29 @@
             145
         ],
         "cataract_surgery_cost": [
-            333,
+            334,
             678
         ],
         "cesarean_section_cost": [
-            333,
-            800,
-            900
+            3333,
+            8040,
+            4553
         ],
         "coronary_artery_bypass_cost": [
             333,
             900
         ],
         "debridement_of_wound_cost": [
-            333,
-            900
+            3424,
+            9023
         ],
         "free_skin_graft_cost": [
-            333,
-            345
+            33233,
+            34235
         ],
         "spinal_fusion_cost": [
-            333,
-            900
+            34433,
+            90220
         ],
         "total_hip_replacement_cost": [
             333,
@@ -71,35 +71,35 @@
             900
         ],
         "cataract_surgery_cost": [
-            333,
-            800,
+            23344,
+            8300,
             900
         ],
         "cesarean_section_cost": [
-            333,
-            900
+            1344,
+            2344
         ],
         "coronary_artery_bypass_cost": [
-            333,
-            800,
-            900
+            1122,
+            1800,
+            2900
         ],
         "debridement_of_wound_cost": [
-            333,
-            800
+            2344,
+            3800
         ],
         "free_skin_graft_cost": [
-            333,
-            800,
-            900
+            2343,
+            1800,
+            4900
         ],
         "spinal_fusion_cost": [
-            800,
-            900
+            18002,
+            49002
         ],
         "total_hip_replacement_cost": [
-            800,
-            900
+            1800,
+            1900
         ]
     },
     {
@@ -108,52 +108,52 @@
         "lng": -77.201559,
         "lat": 38.832562,
         "appendectomy_cost": [
-            100,
-            200
+            2344,
+            4355
         ],
         "breast_biopsy_cost": [
-            200,
-            300
+            2334,
+            5555
         ],
         "carotid_endarterectomy_cost": [
-            333,
+            1333,
             3455,
             900
         ],
         "cataract_surgery_cost": [
-            333,
-            800,
-            345
+            2333,
+            2800,
+            3445
         ],
         "cesarean_section_cost": [
-            333,
-            123,
-            900
+            1333,
+            2123,
+            1900
         ],
         "coronary_artery_bypass_cost": [
-            333,
-            456,
-            900
+            2333,
+            4456,
+            2900
         ],
         "debridement_of_wound_cost": [
-            333,
+            2333,
             23444,
-            344
+            4344
         ],
         "free_skin_graft_cost": [
-            333,
+            2333,
             3455,
             900
         ],
         "spinal_fusion_cost": [
-            333,
-            800,
+            44333,
+            2800,
             234
         ],
         "total_hip_replacement_cost": [
-            333,
-            800,
-            900
+            2333,
+            2800,
+            4900
         ]
     },
     {
@@ -162,54 +162,54 @@
         "lng": -77.050657,
         "lat": 38.901572,
         "appendectomy_cost": [
-            333,
-            800,
-            900
+            3333,
+            2800,
+            4900
         ],
         "breast_biopsy_cost": [
-            333,
-            233,
-            900
+            4333,
+            2333,
+            4900
         ],
         "carotid_endarterectomy_cost": [
-            333,
-            3455,
-            900
+            2333,
+            33455,
+            4900
         ],
         "cataract_surgery_cost": [
-            333,
-            800,
-            900
+            2333,
+            3800,
+            4900
         ],
         "cesarean_section_cost": [
-            333,
-            234,
-            900
+            2333,
+            4234,
+            4900
         ],
         "coronary_artery_bypass_cost": [
-            333,
-            800,
-            900
+            2333,
+            4800,
+            4900
         ],
         "debridement_of_wound_cost": [
-            333,
-            2345,
-            900
+            2333,
+            4345,
+            2900
         ],
         "free_skin_graft_cost": [
-            333,
-            800,
-            900
+            3333,
+            4800,
+            2900
         ],
         "spinal_fusion_cost": [
-            333,
-            800,
-            900
+            3133,
+            8200,
+            9400
         ],
         "total_hip_replacement_cost": [
-            333,
+            2333,
             5566,
-            900
+            8900
         ]
     },
     {
@@ -218,54 +218,54 @@
         "lng": -77.105010,
         "lat": 38.822989,
         "appendectomy_cost": [
-            333,
-            3456,
-            900
+            2333,
+            33456,
+            1900
         ],
         "breast_biopsy_cost": [
-            333,
-            800,
-            233
+            1333,
+            2800,
+            2233
         ],
         "carotid_endarterectomy_cost": [
-            333,
+            3333,
             800,
             900
         ],
         "cataract_surgery_cost": [
-            333,
+            4333,
             435,
             900
         ],
         "cesarean_section_cost": [
             333,
-            33,
+            2433,
             900
         ],
         "coronary_artery_bypass_cost": [
-            333,
-            800,
+            2333,
+            4800,
             2345
         ],
         "debridement_of_wound_cost": [
-            333,
-            800,
+            2333,
+            4800,
             2344
         ],
         "free_skin_graft_cost": [
             333,
-            800,
+            3800,
             2345
         ],
         "spinal_fusion_cost": [
-            333,
+            5333,
             234,
-            900
+            9300
         ],
         "total_hip_replacement_cost": [
-            333,
-            800,
-            789
+            2333,
+            4800,
+            3789
         ]
     },
     {
@@ -274,54 +274,54 @@
         "lng": -77.042917,
         "lat": 38.991747,
         "appendectomy_cost": [
-            333,
-            800,
+            5333,
+            2800,
             344
         ],
         "breast_biopsy_cost": [
             333,
-            800,
-            900
+            4800,
+            9200
         ],
         "carotid_endarterectomy_cost": [
             333,
-            800,
-            900
+            8300,
+            9500
         ],
         "cataract_surgery_cost": [
             333,
-            345,
-            900
+            3245,
+            9400
         ],
         "cesarean_section_cost": [
             333,
-            345,
-            900
+            3425,
+            9040
         ],
         "coronary_artery_bypass_cost": [
-            333,
-            345,
-            900
+            3323,
+            3445,
+            9050
         ],
         "debridement_of_wound_cost": [
-            333,
-            33,
-            900
+            3333,
+            332,
+            9050
         ],
         "free_skin_graft_cost": [
-            333,
-            67,
-            233
+            3333,
+            6424,
+            2333
         ],
         "spinal_fusion_cost": [
-            333,
-            344,
-            900
+            3323,
+            3434,
+            9400
         ],
         "total_hip_replacement_cost": [
-            333,
+            3343,
             3455,
-            900
+            9020
         ]
     }
 ]
