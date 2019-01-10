@@ -4,6 +4,15 @@ const cors = require("cors");
 const { Hospital } = require("./models/hospital.js");
 const port = process.env.PORT || 3010;
 
+
+//User requires
+const passport = require('./config/passport')();
+const config = require('./config/config')
+const jwt = require('jwt-simple')
+// const User = require("./models/User.js");
+const mongoose = require('./models/User')
+const User = mongoose.model('User')
+
 //required for environmental variables on frontend
 require('dotenv').config();
 
@@ -15,12 +24,69 @@ app.use(cors());
 app.use(express.static("client/build"));
 
 
-// app.get("/", (req, res) => {
-//     res.sendFile(__dirname + "/client/build/index.html");
-// });
+//User routes
+app.use(passport.initialize())
+
+//Sign up adding new user to database
+app.post('/signup', (req, res) => {
+    if (req.body.email && req.body.password) {
+        let newUser = {
+            email: req.body.email,
+            password: req.body.password
+        }
+        User.findOne({ email: req.body.email })
+            .then((user) => {
+                if (!user) {
+                    User.create(newUser)
+                        .then(user => {
+                            if (user) {
+                                var payload = {
+                                    id: newUser.id
+                                }
+                                var token = jwt.encode(payload, config.jwtSecret)
+                                res.json({
+                                    token: token
+                                })
+                            } else {
+                                res.sendStatus(401)
+                            }
+                        })
+                } else {
+                    res.sendStatus(401)
+                }
+            })
+    } else {
+        res.sendStatus(401)
+    }
+})
+
+//user Login
+app.post('/login', (req, res) => {
+    if (req.body.email && req.body.password) {
+        User.findOne({ email: req.body.email }).then(user => {
+            if (user) {
+                if (user.password === req.body.password) {
+                    var payload = {
+                        id: user.id
+                    }
+                    var token = jwt.encode(payload, config.jwtSecret)
+                    res.json({
+                        token: token
+                    })
+                } else {
+                    res.sendStatus(401)
+                }
+            } else {
+                res.sendStatus(401)
+            }
+        })
+    } else {
+        res.sendStatus(401)
+    }
+})
 
 
-//NEW TO TRY AVERAGE
+//Get Hospitals and calc average per procedure
 app.get("/api/hospitals", (req, res) => {
     Hospital.find()
         .then(hospital => {
