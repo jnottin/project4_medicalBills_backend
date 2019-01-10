@@ -269,10 +269,10 @@
         ]
     },
     {
-        "name": "AllCare Family Medical Practice - Arlington",
-        "address": "1515 N Courthouse Rd, Arlington, VA 22201",
-        "lng": -77.042917,
-        "lat": 38.991747,
+        "name": "Johns Hopkins Community Physicians Heart Care - Silver Spring",
+        "address": "8630 Fenton St #1105, Silver Spring, MD 20910",
+        "lng": -77.028504,
+        "lat": 38.998061,
         "appendectomy_cost": [
             5333,
             2800,
