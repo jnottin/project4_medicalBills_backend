@@ -32,7 +32,7 @@ app.use(passport.initialize())
 app.get('/userHospitals', (req, res) => {
     // console.log(req.headers)
     try {
-        var authorization = req.headers.authorization
+        var authorization = req.headers.authorization.split(' ')[1]
         console.log(authorization)
         var authorizationDecode = jwtDecode(authorization, config.jwtSecret)
         console.log(authorizationDecode)
