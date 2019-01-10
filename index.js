@@ -9,7 +9,7 @@ const port = process.env.PORT || 3010;
 const passport = require('./config/passport')();
 const config = require('./config/config')
 const jwt = require('jwt-simple')
-// const User = require("./models/User.js");
+var jwtDecode = require('jwt-decode');
 const mongoose = require('./models/User')
 const User = mongoose.model('User')
 
@@ -26,6 +26,45 @@ app.use(express.static("client/build"));
 
 //User routes
 app.use(passport.initialize())
+
+
+//Show User Bills
+app.get('/userHospitals', (req, res) => {
+    // console.log(req.headers)
+    try {
+        var authorization = req.headers.authorization
+        console.log(authorization)
+        var authorizationDecode = jwtDecode(authorization, config.jwtSecret)
+        console.log(authorizationDecode)
+        var userId = authorizationDecode.id
+        console.log(userId)
+        return userId
+    }
+    catch (error) {
+        console.log('could not decode ID', error)
+        return null
+    }
+
+    // if (req.headers && req.headers.authorization) {
+    //     var authorization = headers.authorization.split(' ')[1],
+    //         decoded;
+    //     try {
+    //         decoded = jwt.verify(authorization, secret.secretToken);
+    //     } catch (e) {
+    //         return res.status(401).send('unauthorized');
+    //     }
+    //     var userId = decoded.id;
+
+    //     // Fetch the user by id 
+    //     User.findOne({ _id: userId }).then(function (user) {
+    //         // Do something with the user
+    //         return res.sendStatus(200);
+    //     });
+    //     console.log(userId)
+    // }
+    // return res.sendStatus(500);
+});
+
 
 //Sign up adding new user to database
 app.post('/signup', (req, res) => {
@@ -124,6 +163,7 @@ app.post("/newMedicalBill", (req, res) => {
                 Hospital.findOne({
                     name: req.body.name
                 }).then(hospital => {
+
                     console.log(procedureCost)
                     if (procedure === 'appendectomy_cost') {
                         hospital.appendectomy_cost.push(
@@ -176,6 +216,7 @@ app.post("/newMedicalBill", (req, res) => {
 
             } else {
                 if (procedure === 'appendectomy_cost') {
+                    console.log(req.body.email)
                     Hospital.create({
                         name: req.body.name,
                         address: req.body.address,
@@ -183,8 +224,13 @@ app.post("/newMedicalBill", (req, res) => {
                         lat: req.body.lat,
                         appendectomy_cost: req.body.cost
                     }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
+                        User.findOne({
+                            email: req.body.email
+                        }).then(user => {
+                            user.userHospitals.push(hospital);
+                            res.send(hospital);
+                            console.log(user.userHospitals)
+                        })
                     });
                 } else if (procedure === 'breast_biopsy_cost') {
                     Hospital.create({
