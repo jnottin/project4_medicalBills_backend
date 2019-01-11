@@ -8,8 +8,8 @@ const port = process.env.PORT || 3010;
 //User requires
 const passport = require('./config/passport')();
 const config = require('./config/config')
+const getIdFromToken = require('./functions.js')
 const jwt = require('jwt-simple')
-const jwtDecode = require('jwt-decode');
 const mongoose = require('./models/User')
 const User = mongoose.model('User')
 
@@ -30,26 +30,12 @@ app.use(passport.initialize())
 
 //Show User Bills
 app.get('/userHospitals', (req, res) => {
-    if (req.headers && req.headers.authorization) {
-        var authorization = req.headers.authorization.split(' ')[1]
-        console.log(authorization)
-        try {
-            var decoded = jwtDecode(authorization, config.jwtSecret);
-            console.log(decoded)
-        } catch (e) {
-            return res.status(401).send('unauthorized');
-        }
-        var userId = decoded.id;
-        console.log(userId)
-
-        //     // Fetch the user by id 
-        //     User.findOne({ _id: userId }).then(function (user) {
-        //         // Do something with the user
-        //         return res.sendStatus(200);
-        //     });
-        //     console.log(userId)
-    }
-    // return res.sendStatus(500);
+    var userId = getIdFromToken(req)
+    console.log(userId)
+    User.findOne({ _id: userId }).populate('userHospitals').then(user => {
+        console.log(user)
+        res.json(user)
+    });
 });
 
 
@@ -69,6 +55,7 @@ app.post('/signup', (req, res) => {
                                 var payload = {
                                     id: user._id
                                 }
+                                console.log(payload)
                                 var token = jwt.encode(payload, config.jwtSecret)
                                 res.json({
                                     token: token
@@ -137,11 +124,8 @@ app.get("/api/hospitals", (req, res) => {
 });
 
 app.post("/newMedicalBill", (req, res) => {
-    console.log(req.body);;
-    console.log(req.body.procedure);
     var procedure = req.body.procedure
     var procedureCost = req.body.cost
-    console.log(procedure)
 
     Hospital.countDocuments({ name: req.body.name })
         .then(count => {
@@ -150,8 +134,7 @@ app.post("/newMedicalBill", (req, res) => {
                 Hospital.findOne({
                     name: req.body.name
                 }).then(hospital => {
-
-                    console.log(procedureCost)
+                    console.log(hospital)
                     if (procedure === 'appendectomy_cost') {
                         hospital.appendectomy_cost.push(
                             procedureCost
@@ -203,7 +186,6 @@ app.post("/newMedicalBill", (req, res) => {
 
             } else {
                 if (procedure === 'appendectomy_cost') {
-                    console.log(req.body.email)
                     Hospital.create({
                         name: req.body.name,
                         address: req.body.address,
@@ -211,12 +193,16 @@ app.post("/newMedicalBill", (req, res) => {
                         lat: req.body.lat,
                         appendectomy_cost: req.body.cost
                     }).then(hospital => {
+                        var userId = getIdFromToken(req)
+                        console.log(userId)
                         User.findOne({
-                            email: req.body.email
+                            _id: userId
                         }).then(user => {
                             user.userHospitals.push(hospital);
-                            res.send(hospital);
-                            console.log(user.userHospitals)
+                            user.save(err => {
+                                res.send(hospital)
+                                console.log(user.userHospitals)
+                            })
                         })
                     });
                 } else if (procedure === 'breast_biopsy_cost') {
