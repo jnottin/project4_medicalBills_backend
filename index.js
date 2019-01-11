@@ -9,7 +9,7 @@ const port = process.env.PORT || 3010;
 const passport = require('./config/passport')();
 const config = require('./config/config')
 const jwt = require('jwt-simple')
-var jwtDecode = require('jwt-decode');
+const jwtDecode = require('jwt-decode');
 const mongoose = require('./models/User')
 const User = mongoose.model('User')
 
@@ -30,38 +30,25 @@ app.use(passport.initialize())
 
 //Show User Bills
 app.get('/userHospitals', (req, res) => {
-    // console.log(req.headers)
-    try {
+    if (req.headers && req.headers.authorization) {
         var authorization = req.headers.authorization.split(' ')[1]
         console.log(authorization)
-        var authorizationDecode = jwtDecode(authorization, config.jwtSecret)
-        console.log(authorizationDecode)
-        var userId = authorizationDecode.id
+        try {
+            var decoded = jwtDecode(authorization, config.jwtSecret);
+            console.log(decoded)
+        } catch (e) {
+            return res.status(401).send('unauthorized');
+        }
+        var userId = decoded.id;
         console.log(userId)
-        return userId
-    }
-    catch (error) {
-        console.log('could not decode ID', error)
-        return null
-    }
 
-    // if (req.headers && req.headers.authorization) {
-    //     var authorization = headers.authorization.split(' ')[1],
-    //         decoded;
-    //     try {
-    //         decoded = jwt.verify(authorization, secret.secretToken);
-    //     } catch (e) {
-    //         return res.status(401).send('unauthorized');
-    //     }
-    //     var userId = decoded.id;
-
-    //     // Fetch the user by id 
-    //     User.findOne({ _id: userId }).then(function (user) {
-    //         // Do something with the user
-    //         return res.sendStatus(200);
-    //     });
-    //     console.log(userId)
-    // }
+        //     // Fetch the user by id 
+        //     User.findOne({ _id: userId }).then(function (user) {
+        //         // Do something with the user
+        //         return res.sendStatus(200);
+        //     });
+        //     console.log(userId)
+    }
     // return res.sendStatus(500);
 });
 
@@ -80,7 +67,7 @@ app.post('/signup', (req, res) => {
                         .then(user => {
                             if (user) {
                                 var payload = {
-                                    id: newUser.id
+                                    id: user._id
                                 }
                                 var token = jwt.encode(payload, config.jwtSecret)
                                 res.json({
@@ -106,7 +93,7 @@ app.post('/login', (req, res) => {
             if (user) {
                 if (user.password === req.body.password) {
                     var payload = {
-                        id: user.id
+                        id: user._id
                     }
                     var token = jwt.encode(payload, config.jwtSecret)
                     res.json({
