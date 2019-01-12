@@ -124,7 +124,7 @@ app.get("/api/hospitals", (req, res) => {
 });
 
 app.post("/newMedicalBill", (req, res) => {
-    var procedure = req.body.procedure
+    var procedureName = req.body.procedureName
     var procedureCost = req.body.cost
 
     Hospital.countDocuments({ name: req.body.name })
@@ -135,49 +135,9 @@ app.post("/newMedicalBill", (req, res) => {
                     name: req.body.name
                 }).then(hospital => {
                     console.log(hospital)
-                    if (procedure === 'appendectomy_cost') {
-                        hospital.appendectomy_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'breast_biopsy_cost') {
-                        hospital.breast_biopsy_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'carotid_endarterectomy_cost') {
-                        hospital.carotid_endarterectomy_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'cataract_surgery_cost') {
-                        hospital.cataract_surgery_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'cesarean_section_cost') {
-                        hospital.cesarean_section_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'coronary_artery_bypass_cost') {
-                        hospital.coronary_artery_bypass_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'debridement_of_wound_cost') {
-                        hospital.debridement_of_wound_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'free_skin_graft_cost') {
-                        hospital.free_skin_graft_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'spinal_fusion_cost') {
-                        hospital.spinal_fusion_cost.push(
-                            procedureCost
-                        )
-                    } else if (procedure === 'total_hip_replacement_cost') {
-                        hospital.total_hip_replacement_cost.push(
-                            procedureCost
-                        )
-                    } else {
-                        console.log("error!!!!!")
-                    }
+                    hospital[procedureName].push(
+                        procedureCost
+                    )
                     console.log(hospital)
                     hospital.save(err => {
                         res.send(hospital)
@@ -185,128 +145,29 @@ app.post("/newMedicalBill", (req, res) => {
                 })
 
             } else {
-                if (procedure === 'appendectomy_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        appendectomy_cost: req.body.cost
-                    }).then(hospital => {
-                        var userId = getIdFromToken(req)
-                        console.log(userId)
-                        User.findOne({
-                            _id: userId
-                        }).then(user => {
-                            user.userHospitals.push(hospital);
-                            user.save(err => {
-                                res.send(hospital)
-                                console.log(user.userHospitals)
-                            })
+                Hospital.create({
+                    name: req.body.name,
+                    address: req.body.address,
+                    lng: req.body.lng,
+                    lat: req.body.lat,
+                }).then(hospital => {
+                    hospital[procedureName].push(procedureCost)
+                    hospital.save(err => { })
+                    var userId = getIdFromToken(req)
+                    console.log(userId)
+                    // Procedure.create({
+
+                    // })
+                    User.findOne({
+                        _id: userId
+                    }).then(user => {
+                        user.userHospitals.push(hospital);
+                        user.save(err => {
+                            res.send(hospital)
+                            console.log(user.userHospitals)
                         })
-                    });
-                } else if (procedure === 'breast_biopsy_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        breast_biopsy_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'carotid_endarterectomy_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        carotid_endarterectomy_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'cataract_surgery_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        cataract_surgery_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'cesarean_section_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        cesarean_section_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'coronary_artery_bypass_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        coronary_artery_bypass_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'debridement_of_wound_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        debridement_of_wound_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'free_skin_graft_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        free_skin_graft_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'spinal_fusion_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        spinal_fusion_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else if (procedure === 'total_hip_replacement_cost') {
-                    Hospital.create({
-                        name: req.body.name,
-                        address: req.body.address,
-                        lng: req.body.lng,
-                        lat: req.body.lat,
-                        total_hip_replacement_cost: req.body.cost
-                    }).then(hospital => {
-                        res.send(hospital);
-                        console.log(hospital)
-                    });
-                } else {
-                    console.log("Error on something!!!")
-                }
+                    })
+                });
             }
         })
 });
