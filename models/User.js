@@ -5,9 +5,9 @@ const Schema = mongoose.Schema;
 const UserSchema = new mongoose.Schema({
     email: String,
     password: String,
-    userHospitals: [{
+    userProcedures: [{
         type: Schema.Types.ObjectId,
-        ref: 'Hospital'
+        ref: 'Procedure'
     }]
 })
 

@@ -2,6 +2,7 @@ const express = require("express");
 const parser = require("body-parser");
 const cors = require("cors");
 const { Hospital } = require("./models/hospital.js");
+const { Procedure } = require("./models/procedure.js");
 const port = process.env.PORT || 3010;
 
 
@@ -29,10 +30,10 @@ app.use(passport.initialize())
 
 
 //Show User Bills
-app.get('/userHospitals', (req, res) => {
+app.get('/userProcedures', (req, res) => {
     var userId = getIdFromToken(req)
     console.log(userId)
-    User.findOne({ _id: userId }).populate('userHospitals').then(user => {
+    User.findOne({ _id: userId }).populate('userProcedures').then(user => {
         console.log(user)
         res.json(user)
     });
@@ -126,6 +127,7 @@ app.get("/api/hospitals", (req, res) => {
 app.post("/newMedicalBill", (req, res) => {
     var procedureName = req.body.procedureName
     var procedureCost = req.body.cost
+    var fakeDate = 'fakedate'
 
     Hospital.countDocuments({ name: req.body.name })
         .then(count => {
@@ -134,14 +136,32 @@ app.post("/newMedicalBill", (req, res) => {
                 Hospital.findOne({
                     name: req.body.name
                 }).then(hospital => {
-                    console.log(hospital)
                     hospital[procedureName].push(
                         procedureCost
                     )
-                    console.log(hospital)
                     hospital.save(err => {
-                        res.send(hospital)
+                        // res.send(hospital)
                     })
+                    var userId = getIdFromToken(req)
+                    Procedure.create({
+                        name_of_procedure: procedureName,
+                        hospital_name: req.body.name,
+                        hospital_address: req.body.address,
+                        cost: procedureCost,
+                        date_of_procedure: req.body.date_of_procedure
+                    }).then(procedure => {
+                        console.log(procedure)
+                        User.findOne({
+                            _id: userId
+                        }).then(user => {
+                            user.userProcedures.push(procedure);
+                            user.save(err => {
+                                res.send(procedure)
+                                console.log(user.userProcedures)
+                            })
+                        })
+                    })
+
                 })
 
             } else {
@@ -152,20 +172,28 @@ app.post("/newMedicalBill", (req, res) => {
                     lat: req.body.lat,
                 }).then(hospital => {
                     hospital[procedureName].push(procedureCost)
-                    hospital.save(err => { })
+                    hospital.save(err => {
+                        // res.send(hospital)
+                    })
                     var userId = getIdFromToken(req)
-                    console.log(userId)
-                    // Procedure.create({
-
-                    // })
-                    User.findOne({
-                        _id: userId
-                    }).then(user => {
-                        user.userHospitals.push(hospital);
-                        user.save(err => {
-                            res.send(hospital)
-                            console.log(user.userHospitals)
+                    Procedure.create({
+                        name_of_procedure: procedureName,
+                        hospital_name: req.body.name,
+                        hospital_address: req.body.address,
+                        cost: procedureCost,
+                        date_of_procedure: req.body.date_of_procedure
+                    }).then(procedure => {
+                        console.log(procedure)
+                        User.findOne({
+                            _id: userId
+                        }).then(user => {
+                            user.userProcedures.push(procedure);
+                            user.save(err => {
+                                res.send(procedure)
+                                console.log(user.userProcedures)
+                            })
                         })
+
                     })
                 });
             }
