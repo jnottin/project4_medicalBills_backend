@@ -12,6 +12,7 @@ const config = require('./config/config')
 const functions = require('./functions.js')
 const getIdFromToken = functions.getIdFromToken;
 const getProcedureName = functions.getProcedureName;
+const calcProcedureCosts = functions.calcProcedureCosts
 const jwt = require('jwt-simple')
 const mongoose = require('./models/User')
 const User = mongoose.model('User')
@@ -104,8 +105,24 @@ app.post('/login', (req, res) => {
 
 //Get Hospitals and calc average per procedure
 app.get("/api/hospitals", (req, res) => {
-    Hospital.find()
+    Hospital.find().populate('totalHospitalprocedures')
         .then(hospital => {
+            for (var i = 0; i < hospital.length; i++) {
+                if (hospital[i].totalHospitalprocedures.length !== 0) {
+                    hospital[i].appendectomy_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Appendectomy');
+                    hospital[i].breast_biopsy_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Breast Biopsy');
+                    hospital[i].carotid_endarterectomy_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Carotid Endarterectomy');
+                    hospital[i].cataract_surgery_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Cataract Surgery');
+                    hospital[i].cesarean_section_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Cesarean Section');
+                    hospital[i].coronary_artery_bypass_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Coronary Artery Bypass');
+                    hospital[i].debridement_of_wound_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Debridement of Wound');
+                    hospital[i].free_skin_graft_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Free Skin Graft');
+                    hospital[i].spinal_fusion_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Spinal Fusion');
+                    hospital[i].total_hip_replacement_cost = calcProcedureCosts(hospital[i].totalHospitalprocedures, 'Total Hip Replacement');
+                } else {
+                    // console.log("seed Data")
+                }
+            }
             for (var i = 0; i < hospital.length; i++) {
                 hospital[i].avg_appendectomy_cost = hospital[i].avgPriceMethod(hospital[i].appendectomy_cost);
                 hospital[i].avg_breast_biopsy_cost = hospital[i].avgPriceMethod(hospital[i].breast_biopsy_cost);
@@ -137,12 +154,6 @@ app.post("/newMedicalBill", (req, res) => {
                 Hospital.findOne({
                     name: req.body.name
                 }).then(hospital => {
-                    hospital[procedureName].push(
-                        procedureCost
-                    )
-                    hospital.save(err => {
-                        // res.send(hospital)
-                    })
                     var procedureTextName = getProcedureName(procedureName)
                     var userId = getIdFromToken(req)
                     Procedure.create({
@@ -152,6 +163,12 @@ app.post("/newMedicalBill", (req, res) => {
                         cost: procedureCost,
                         date_of_procedure: req.body.date_of_procedure
                     }).then(procedure => {
+                        hospital.totalHospitalprocedures.push(
+                            procedure
+                        )
+                        hospital.save(err => {
+                            // res.send(hospital)
+                        })
                         console.log(procedure)
                         User.findOne({
                             _id: userId
@@ -173,10 +190,6 @@ app.post("/newMedicalBill", (req, res) => {
                     lng: req.body.lng,
                     lat: req.body.lat,
                 }).then(hospital => {
-                    hospital[procedureName].push(procedureCost)
-                    hospital.save(err => {
-                        // res.send(hospital)
-                    })
                     var procedureTextName = getProcedureName(procedureName)
                     var userId = getIdFromToken(req)
                     Procedure.create({
@@ -186,6 +199,11 @@ app.post("/newMedicalBill", (req, res) => {
                         cost: procedureCost,
                         date_of_procedure: req.body.date_of_procedure
                     }).then(procedure => {
+                        hospital.totalHospitalprocedures.push(procedure)
+                        hospital.save(err => {
+                            // res.send(hospital)
+                        })
+                        console.log('procedure')
                         console.log(procedure)
                         User.findOne({
                             _id: userId

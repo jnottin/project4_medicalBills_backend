@@ -4,6 +4,7 @@
         "address": "1515 N Courthouse Rd, Arlington, VA 22201",
         "lng": -77.082917,
         "lat": 38.891747,
+        "totalHospitalprocedures": [],
         "appendectomy_cost": [
             556,
             2333,
@@ -55,6 +56,7 @@
         "address": "5860 Columbia Pike, Falls Church, VA 22041",
         "lng": -77.0804,
         "lat": 38.848869,
+        "totalHospitalprocedures": [],
         "appendectomy_cost": [
             344,
             800,
@@ -107,6 +109,7 @@
         "address": "7432 Little River Tpke, Annandale, VA 22003",
         "lng": -77.201559,
         "lat": 38.832562,
+        "totalHospitalprocedures": [],
         "appendectomy_cost": [
             2344,
             4355
@@ -161,6 +164,7 @@
         "address": "900 23rd St NW, Washington, DC 20037",
         "lng": -77.050657,
         "lat": 38.901572,
+        "totalHospitalprocedures": [],
         "appendectomy_cost": [
             3333,
             2800,
@@ -217,6 +221,7 @@
         "address": "4320 Seminary Rd, Alexandria, VA 22304",
         "lng": -77.105010,
         "lat": 38.822989,
+        "totalHospitalprocedures": [],
         "appendectomy_cost": [
             2333,
             33456,
@@ -273,6 +278,7 @@
         "address": "8630 Fenton St #1105, Silver Spring, MD 20910",
         "lng": -77.028504,
         "lat": 38.998061,
+        "totalHospitalprocedures": [],
         "appendectomy_cost": [
             5333,
             2800,

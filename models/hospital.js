@@ -6,6 +6,10 @@ const Hospital = new Schema({
     address: String,
     lng: Number,
     lat: Number,
+    totalHospitalprocedures: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Procedure'
+    }],
     appendectomy_cost: [Number],
     breast_biopsy_cost: [Number],
     carotid_endarterectomy_cost: [Number],

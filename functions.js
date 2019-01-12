@@ -31,22 +31,15 @@ module.exports = {
         }
         var procedureTextName = procedureTextNamesList[procedureName]
         return procedureTextName
+    },
+    calcProcedureCosts: function (totalHospitalproceduresObj, procedureToCalc) {
+        const selectedProcedures = totalHospitalproceduresObj.filter(procedure => procedure.name_of_procedure === procedureToCalc);
+        var procedureCostArray = []
+        selectedProcedures.forEach(function (element) {
+            procedureCostArray.push(element.cost);
+        });
+        return procedureCostArray
+
+
     }
 }
-
-// module.exports = function getProcedureName(procedureName) {
-//     procedureTextNamesList = {
-//         appendectomy_cost: 'Appendectomy',
-//         breast_biopsy_cost: 'Breast Biopsy',
-//         carotid_endarterectomy_cost: 'Carotid Endarterectomy',
-//         cataract_surgery_cost: 'Cataract Surgery',
-//         cesarean_section_cost: 'Cesarean Section',
-//         coronary_artery_bypass_cost: 'Coronary Artery Bypass',
-//         debridement_of_wound_cost: 'Debridement of Wound',
-//         free_skin_graft_cost: 'Free Skin Graft',
-//         spinal_fusion_cost: 'Spinal Fusion',
-//         total_hip_replacement_cost: 'Total Hip Replacement',
-//     }
-//     var procedureTextName = procedureTextNamesList[procedureName]
-//     return procedureTextName
-// }
