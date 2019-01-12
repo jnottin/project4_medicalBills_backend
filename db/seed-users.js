@@ -1,15 +1,12 @@
-// const { Hospital, Procedure } = require("../models/other_hospital.js");
-// const data = require('./data-procedures.json')
+const mongoose = require('../models/User')
+const User = mongoose.model('User')
+const data = require('./data-procedures.json')
 
 
-// Procedure.deleteMany({})
-//     .then(() => {
-//         Procedure.collection.insertMany(data)
-//             .then((procedures) => {
-//                 console.log(procedures)
-//                 process.exit()
-//             })
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
+User.deleteMany({})
+    .then(() => {
+        process.exit()
+    })
+    .catch((err) => {
+        console.log(err)
+    })

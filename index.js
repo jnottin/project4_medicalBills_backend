@@ -9,7 +9,9 @@ const port = process.env.PORT || 3010;
 //User requires
 const passport = require('./config/passport')();
 const config = require('./config/config')
-const getIdFromToken = require('./functions.js')
+const functions = require('./functions.js')
+const getIdFromToken = functions.getIdFromToken;
+const getProcedureName = functions.getProcedureName;
 const jwt = require('jwt-simple')
 const mongoose = require('./models/User')
 const User = mongoose.model('User')
@@ -127,7 +129,6 @@ app.get("/api/hospitals", (req, res) => {
 app.post("/newMedicalBill", (req, res) => {
     var procedureName = req.body.procedureName
     var procedureCost = req.body.cost
-    var fakeDate = 'fakedate'
 
     Hospital.countDocuments({ name: req.body.name })
         .then(count => {
@@ -142,9 +143,10 @@ app.post("/newMedicalBill", (req, res) => {
                     hospital.save(err => {
                         // res.send(hospital)
                     })
+                    var procedureTextName = getProcedureName(procedureName)
                     var userId = getIdFromToken(req)
                     Procedure.create({
-                        name_of_procedure: procedureName,
+                        name_of_procedure: procedureTextName,
                         hospital_name: req.body.name,
                         hospital_address: req.body.address,
                         cost: procedureCost,
@@ -175,9 +177,10 @@ app.post("/newMedicalBill", (req, res) => {
                     hospital.save(err => {
                         // res.send(hospital)
                     })
+                    var procedureTextName = getProcedureName(procedureName)
                     var userId = getIdFromToken(req)
                     Procedure.create({
-                        name_of_procedure: procedureName,
+                        name_of_procedure: procedureTextName,
                         hospital_name: req.body.name,
                         hospital_address: req.body.address,
                         cost: procedureCost,
