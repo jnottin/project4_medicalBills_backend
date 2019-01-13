@@ -4,32 +4,51 @@
         "address": "1515 N Courthouse Rd, Arlington, VA 22201",
         "lng": -77.082917,
         "lat": 38.891747,
-        "cost": 500,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "totalHospitalprocedures": [],
+        "appendectomy_cost": [
+            556,
+            2333,
+            342
+        ],
+        "breast_biopsy_cost": [
+            556,
+            4543,
+            122
+        ],
+        "carotid_endarterectomy_cost": [
+            2123,
+            123,
+            145
+        ],
+        "cataract_surgery_cost": [
+            334,
+            678
+        ],
+        "cesarean_section_cost": [
+            3333,
+            8040,
+            4553
+        ],
+        "coronary_artery_bypass_cost": [
+            333,
+            900
+        ],
+        "debridement_of_wound_cost": [
+            3424,
+            9023
+        ],
+        "free_skin_graft_cost": [
+            33233,
+            34235
+        ],
+        "spinal_fusion_cost": [
+            34433,
+            90220
+        ],
+        "total_hip_replacement_cost": [
+            333,
+            234,
+            900
         ]
     },
     {
@@ -37,32 +56,52 @@
         "address": "5860 Columbia Pike, Falls Church, VA 22041",
         "lng": -77.0804,
         "lat": 38.848869,
-        "cost": 300,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "totalHospitalprocedures": [],
+        "appendectomy_cost": [
+            344,
+            800,
+            234
+        ],
+        "breast_biopsy_cost": [
+            333,
+            800,
+            900
+        ],
+        "carotid_endarterectomy_cost": [
+            333,
+            234,
+            900
+        ],
+        "cataract_surgery_cost": [
+            23344,
+            8300,
+            900
+        ],
+        "cesarean_section_cost": [
+            1344,
+            2344
+        ],
+        "coronary_artery_bypass_cost": [
+            1122,
+            1800,
+            2900
+        ],
+        "debridement_of_wound_cost": [
+            2344,
+            3800
+        ],
+        "free_skin_graft_cost": [
+            2343,
+            1800,
+            4900
+        ],
+        "spinal_fusion_cost": [
+            18002,
+            49002
+        ],
+        "total_hip_replacement_cost": [
+            1800,
+            1900
         ]
     },
     {
@@ -70,32 +109,54 @@
         "address": "7432 Little River Tpke, Annandale, VA 22003",
         "lng": -77.201559,
         "lat": 38.832562,
-        "cost": 600,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "totalHospitalprocedures": [],
+        "appendectomy_cost": [
+            2344,
+            4355
+        ],
+        "breast_biopsy_cost": [
+            2334,
+            5555
+        ],
+        "carotid_endarterectomy_cost": [
+            1333,
+            3455,
+            900
+        ],
+        "cataract_surgery_cost": [
+            2333,
+            2800,
+            3445
+        ],
+        "cesarean_section_cost": [
+            1333,
+            2123,
+            1900
+        ],
+        "coronary_artery_bypass_cost": [
+            2333,
+            4456,
+            2900
+        ],
+        "debridement_of_wound_cost": [
+            2333,
+            23444,
+            4344
+        ],
+        "free_skin_graft_cost": [
+            2333,
+            3455,
+            900
+        ],
+        "spinal_fusion_cost": [
+            44333,
+            2800,
+            234
+        ],
+        "total_hip_replacement_cost": [
+            2333,
+            2800,
+            4900
         ]
     },
     {
@@ -103,32 +164,56 @@
         "address": "900 23rd St NW, Washington, DC 20037",
         "lng": -77.050657,
         "lat": 38.901572,
-        "cost": 700,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "totalHospitalprocedures": [],
+        "appendectomy_cost": [
+            3333,
+            2800,
+            4900
+        ],
+        "breast_biopsy_cost": [
+            4333,
+            2333,
+            4900
+        ],
+        "carotid_endarterectomy_cost": [
+            2333,
+            33455,
+            4900
+        ],
+        "cataract_surgery_cost": [
+            2333,
+            3800,
+            4900
+        ],
+        "cesarean_section_cost": [
+            2333,
+            4234,
+            4900
+        ],
+        "coronary_artery_bypass_cost": [
+            2333,
+            4800,
+            4900
+        ],
+        "debridement_of_wound_cost": [
+            2333,
+            4345,
+            2900
+        ],
+        "free_skin_graft_cost": [
+            3333,
+            4800,
+            2900
+        ],
+        "spinal_fusion_cost": [
+            3133,
+            8200,
+            9400
+        ],
+        "total_hip_replacement_cost": [
+            2333,
+            5566,
+            8900
         ]
     },
     {
@@ -136,65 +221,113 @@
         "address": "4320 Seminary Rd, Alexandria, VA 22304",
         "lng": -77.105010,
         "lat": 38.822989,
-        "cost": 500,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "totalHospitalprocedures": [],
+        "appendectomy_cost": [
+            2333,
+            33456,
+            1900
+        ],
+        "breast_biopsy_cost": [
+            1333,
+            2800,
+            2233
+        ],
+        "carotid_endarterectomy_cost": [
+            3333,
+            800,
+            900
+        ],
+        "cataract_surgery_cost": [
+            4333,
+            435,
+            900
+        ],
+        "cesarean_section_cost": [
+            333,
+            2433,
+            900
+        ],
+        "coronary_artery_bypass_cost": [
+            2333,
+            4800,
+            2345
+        ],
+        "debridement_of_wound_cost": [
+            2333,
+            4800,
+            2344
+        ],
+        "free_skin_graft_cost": [
+            333,
+            3800,
+            2345
+        ],
+        "spinal_fusion_cost": [
+            5333,
+            234,
+            9300
+        ],
+        "total_hip_replacement_cost": [
+            2333,
+            4800,
+            3789
         ]
     },
     {
-        "name": "AllCare Family Medical Practice - Arlington",
-        "address": "1515 N Courthouse Rd, Arlington, VA 22201",
-        "lng": -77.042917,
-        "lat": 38.991747,
-        "cost": 800,
-        "procedures": [
-            {
-                "name_of_procedure": "Root-canal",
-                "cost": 400,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 500,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Fever",
-                "cost": 1000,
-                "insurance_provider": "Blue Cross",
-                "date_of_procedure": "12/17/18"
-            },
-            {
-                "name_of_procedure": "Back Pain",
-                "cost": 1000,
-                "insurance_provider": "Medic Help",
-                "date_of_procedure": "12/17/18"
-            }
+        "name": "Johns Hopkins Community Physicians Heart Care - Silver Spring",
+        "address": "8630 Fenton St #1105, Silver Spring, MD 20910",
+        "lng": -77.028504,
+        "lat": 38.998061,
+        "totalHospitalprocedures": [],
+        "appendectomy_cost": [
+            5333,
+            2800,
+            344
+        ],
+        "breast_biopsy_cost": [
+            333,
+            4800,
+            9200
+        ],
+        "carotid_endarterectomy_cost": [
+            333,
+            8300,
+            9500
+        ],
+        "cataract_surgery_cost": [
+            333,
+            3245,
+            9400
+        ],
+        "cesarean_section_cost": [
+            333,
+            3425,
+            9040
+        ],
+        "coronary_artery_bypass_cost": [
+            3323,
+            3445,
+            9050
+        ],
+        "debridement_of_wound_cost": [
+            3333,
+            332,
+            9050
+        ],
+        "free_skin_graft_cost": [
+            3333,
+            6424,
+            2333
+        ],
+        "spinal_fusion_cost": [
+            3323,
+            3434,
+            9400
+        ],
+        "total_hip_replacement_cost": [
+            3343,
+            3455,
+            9020
         ]
     }
 ]

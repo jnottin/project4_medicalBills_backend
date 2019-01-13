@@ -1,14 +1,10 @@
-const { Hospital, Procedure } = require("../models/hopsital.js");
+const { Procedure } = require("../models/procedure.js");
 const data = require('./data-procedures.json')
 
 
 Procedure.deleteMany({})
     .then(() => {
-        Procedure.collection.insertMany(data)
-            .then((procedures) => {
-                console.log(procedures)
-                process.exit()
-            })
+        process.exit()
     })
     .catch((err) => {
         console.log(err)

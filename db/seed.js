@@ -1,4 +1,4 @@
-const { Hospital, Procedure } = require("../models/hopsital.js");
+const { Hospital, Procedure } = require("../models/hospital.js");
 const data = require('./data.json')
 
 
