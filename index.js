@@ -188,7 +188,6 @@ app.post("/newMedicalBill", (req, res) => {
                     name: req.body.name
                 }).then(hospital => {
                     var procedureTextName = getProcedureName(procedureName)
-                    var userId = getIdFromToken(req)
                     Procedure.create({
                         name_of_procedure: procedureTextName,
                         hospital_name: req.body.name,
@@ -202,7 +201,7 @@ app.post("/newMedicalBill", (req, res) => {
                         hospital.save(err => {
                             // res.send(hospital)
                         })
-                        console.log(procedure)
+                        var userId = getIdFromToken(req)
                         User.findOne({
                             _id: userId
                         }).then(user => {
