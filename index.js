@@ -31,6 +31,39 @@ app.use(express.static("client/build"));
 //User routes
 app.use(passport.initialize())
 
+//Edit User medical Bill
+app.put("/editMedicalBill/:id", (req, res) => {
+    console.log({ _id: req.params.id });
+    Procedure.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+        if (err) return next(err);
+        res.json(post);
+    });
+});
+
+//Delete User medical Bill
+app.delete("/deleteMedicalBill/:id", (req, res) => {
+    Procedure.findOneAndDelete({ _id: req.params.id })
+        .then(() => {
+            res.status(200).end()
+        })
+        .catch(err => {
+            console.log(err)
+        })
+});
+
+
+//Delete User medical Bill
+app.delete("/deleteMedicalBill/:id", (req, res) => {
+    console.log(req.params.id)
+    console.log(req.body)
+    Procedure.findOneAndDelete({ _id: req.params.id })
+        .then(() => {
+            res.status(200).end()
+        })
+        .catch(err => {
+            console.log(err)
+        })
+});
 
 //Show User Bills
 app.get('/userProcedures', (req, res) => {
