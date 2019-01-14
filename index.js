@@ -98,14 +98,17 @@ app.post('/signup', (req, res) => {
                                     token: token
                                 })
                             } else {
+                                res.statusMessage = "FIRST Current password does not match";
                                 res.sendStatus(401)
                             }
                         })
                 } else {
+                    res.statusMessage = "SECOND Current password does not match";
                     res.sendStatus(401)
                 }
             })
     } else {
+        res.statusMessage = "THIRD Current password does not match";
         res.sendStatus(401)
     }
 })
@@ -125,6 +128,8 @@ app.post('/login', (req, res) => {
                     })
                 } else {
                     res.sendStatus(401)
+
+
                 }
             } else {
                 res.sendStatus(401)
