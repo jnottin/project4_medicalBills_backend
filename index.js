@@ -204,7 +204,6 @@ app.post("/newMedicalBill", (req, res) => {
                             procedure
                         )
                         hospital.save(err => {
-                            // res.send(hospital)
                         })
                         var userId = getIdFromToken(req)
                         User.findOne({
